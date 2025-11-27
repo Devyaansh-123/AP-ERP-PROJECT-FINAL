@@ -241,16 +241,6 @@ This section demonstrates the race condition problem and its resolution through 
 
 ![Race Condition - NONE Strategy](screenshot_none.png)
 
-**Sync:** NONE  
-**Counter:** 9636 | **Total Fleet Mileage:** 416250 | **MISMATCH**
-
-**Vehicle States:**
-- [Car] Toyota: 18000 km | fuel 9433.3
-- [Truck] VolvoTruck: 23500 km | fuel 8937.5
-- [Bus] CityBus: 38000 km | fuel 9200.0
-- [Airplane] Boeing737: 128250 km | fuel 8350.0
-- [CargoShip] Maersk: 208500 km | fuel 10000.0
-
 **Explanation:**
 - Total Fleet Mileage = 18000 + 23500 + 38000 + 128250 + 208500 = **416,250 km**
 - Counter = **9,636** (severely lagging behind expected value)
