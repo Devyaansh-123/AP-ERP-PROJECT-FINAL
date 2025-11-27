@@ -265,15 +265,7 @@ This section demonstrates the race condition problem and its resolution through 
 
 ![Synchronized Fix](screenshot_synchronized.png)
 
-**Sync:** SYNCHRONIZED  
-**Counter:** 11047 | **Total Fleet Mileage:** 11047
 
-**Vehicle States:**
-- [Car] Toyota: 2224 km | fuel 28801.8
-- [Truck] VolvoTruck: 2197 km | fuel 27755.0
-- [Bus] CityBus: 2218 km | fuel 28251.9
-- [Airplane] Boeing737: 2193 km | fuel 26455.2
-- [CargoShip] Maersk: 2215 km | fuel 30000.0
 
 **Explanation:**
 - Counter now matches Total Fleet Mileage exactly (**11,047 = 11,047**)
@@ -288,16 +280,6 @@ This section demonstrates the race condition problem and its resolution through 
 ### Screenshot 3: Fixed with REENTRANT_LOCK Strategy
 
 ![ReentrantLock Fix](screenshot_lock.png)
-
-**Sync:** LOCK  
-**Counter:** 3520 | **Total Fleet Mileage:** 3520
-
-**Vehicle States:**
-- [Car] Toyota: 705 km | fuel 38754.8
-- [Truck] VolvoTruck: 712 km | fuel 37666.0
-- [Bus] CityBus: 689 km | fuel 38183.0
-- [Airplane] Boeing737: 712 km | fuel 36312.8
-- [CargoShip] Maersk: 702 km | fuel 40000.0
 
 **Explanation:**
 - Counter matches Total Fleet Mileage (**3,520 = 3,520**)
@@ -341,9 +323,4 @@ This assignment successfully demonstrates:
 - Multithreaded programming with proper synchronization
 - GUI development with Swing and thread-safe updates
 - Race condition identification and resolution
-- Multiple synchronization strategies (synchronized, atomic, locks)
-- Event Dispatch Thread best practices
-- Real-time visualization of concurrent operations
-- Clean integration with existing fleet management system
 
-The Highway Simulator provides an interactive way to understand concurrency concepts while maintaining the fleet management functionality from previous assignments.
